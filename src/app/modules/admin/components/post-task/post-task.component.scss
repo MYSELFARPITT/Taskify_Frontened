@@ -1,0 +1,133 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f3f3f3, #e7e7e7);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      .form-field {
+        width: 100%;
+  
+        mat-form-field {
+          width: 100%;
+          background-color: white;
+          border-radius: 5px;
+          overflow: hidden;
+  
+          mat-label {
+            font-weight: bold;
+            color: #666;
+          }
+  
+          mat-error {
+            color: #ff5252;
+            font-size: 0.75rem;
+          }
+  
+          input, textarea {
+            font-size: 1rem;
+            padding: 10px;
+          }
+  
+          mat-select {
+            font-size: 1rem;
+            padding: 10px;
+          }
+  
+          mat-datepicker-toggle {
+            margin-right: 10px;
+          }
+        }
+      }
+  
+      button {
+        align-self: center;
+        padding: 12px 24px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #3f51b5;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+  
+        &:hover {
+          background-color: #303f9f;
+        }
+  
+        &:disabled {
+          background-color: #9fa8da;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    form {
+      gap: 15px;
+  
+      .form-field {
+        mat-form-field {
+          input, textarea, mat-select {
+            font-size: 0.9rem;
+            padding: 8px;
+          }
+        }
+      }
+  
+      button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+  
+    form {
+      gap: 10px;
+  
+      .form-field {
+        mat-form-field {
+          input, textarea, mat-select {
+            font-size: 0.8rem;
+            padding: 6px;
+          }
+        }
+      }
+  
+      button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
